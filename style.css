@@ -1,0 +1,432 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #fdbf00;
+}
+.card {
+  width: 640px;
+  height: 400px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+  transition: 1s;
+}
+.card:hover {
+  transform: rotate(-5deg);
+}
+.card:hover .outside {
+  transform: rotateY(-130deg);
+}
+
+#playMusic {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fdbf00;
+  cursor: pointer;
+  z-index: 1001;
+}
+.outside,
+.inside {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50.1%;
+}
+.inside {
+  background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+  line-height: 1.5;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+}
+.outside {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: 1;
+  transform-origin: left;
+  transition: 2s;
+  cursor: pointer;
+}
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+.front {
+  background-color: #ffffff;
+}
+.back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+}
+.cake {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+}
+.top-layer,
+.middle-layer,
+.bottom-layer {
+  height: 80px;
+  width: 240px;
+  background-repeat: repeat;
+  background-size: 60px 100px;
+  background-position: 28px 0;
+  background-image: linear-gradient(
+      transparent 50px,
+      #fedbab 50px,
+      #fedbab 60px,
+      transparent 60px
+    ),
+    radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  margin: auto;
+}
+.middle-layer {
+  transform: scale(0.85);
+  top: 6px;
+}
+.top-layer {
+  transform: scale(0.7);
+  top: 26px;
+}
+
+.outside p {
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 6px;
+  color: #000046;
+}
+.inside h1 {
+  font-size: 120px;
+  line-height: 120px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 80%;
+  max-height: 80%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideUp 0.4s ease forwards;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: slideUp 0.4s ease forwards;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 28px;
+  color: #444;
+  cursor: pointer;
+}
+
+.certificate h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #f57c00;
+}
+.certificate h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+.certificate p {
+  font-size: 16px;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.gift-box-svg {
+  cursor: pointer;
+}
+
+.gift-label {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #d32f2f;
+  margin-bottom: 8px;
+  animation: bounce 1.6s infinite;
+  user-select: none;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Содержимое модалки */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  width: 600px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+/* Кнопка закрытия */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 26px;
+  color: #444;
+  cursor: pointer;
+}
+
+/* Стиль сертификата */
+.certificate h2 {
+  text-align: justify;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.certificate .number {
+  float: right;
+  font-size: 16px;
+  color: #888;
+}
+.certificate h3 {
+  text-align: center;
+  font-weight: normal;
+}
+.certificate .name {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.certificate ol {
+  margin-left: 20px;
+  font-size: 15px;
+  line-height: 2;
+  text-align: left;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 14px;
+}
+.certificate-action {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#bookNowBtn {
+  background-color: #8bc34a;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#bookNowBtn:hover {
+  background-color: #7cb342;
+}
+.candle {
+  height: 45px;
+  width: 15px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fd3018 0,
+    #fd3018 5px,
+    #ffa89e 5px,
+    #ffa89e 10px
+  );
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 202px;
+}
+
+.flame {
+  position: absolute;
+  top: -20px;
+  left: 3px;
+  width: 10px;
+  height: 20px;
+  background: radial-gradient(ellipse at center, #ffa500 0%, #ff4500 80%);
+  border-radius: 50% 50% 50% 50%;
+  animation: flameFlicker 0.3s infinite alternate;
+  transform-origin: bottom center;
+  opacity: 0.9;
+}
+
+@keyframes flameFlicker {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1.1) rotate(3deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 636px;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 28px;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+  }
+}

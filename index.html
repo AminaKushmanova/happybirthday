@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Card</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="outside">
+        <div class="front">
+          <p>С днём рождения!</p>
+          <div class="cake">
+            <div class="top-layer"></div>
+            <div class="middle-layer"></div>
+            <div class="bottom-layer"></div>
+            <div class="candle">
+              <div class="flame"></div>
+            </div>
+          </div>
+        </div>
+        <div class="back"></div>
+      </div>
+      <div class="inside">
+        <p>
+          Дорогая Наташа, искренне поздравляю тебя с днем рождения. Будь
+          счастлива, с годами только хорошей, всегда чувствуй себя нужной. Пусть
+          тебя окружает любовь, внимание и забота. Этот день только твой! Прими
+          этот подарок от нас.
+        </p>
+
+        <div class="gift-label">
+          <span>⬇ Нажми меня</span>
+        </div>
+        <svg
+          width="120"
+          height="120"
+          viewBox="0 0 120 120"
+          xmlns="http://www.w3.org/2000/svg"
+          class="gift-box-svg"
+          id="openModal"
+        >
+          <!-- Коробка -->
+          <rect x="20" y="50" width="80" height="60" fill="#f4a300" rx="5" />
+
+          <!-- Лента по вертикали -->
+          <rect x="55" y="50" width="10" height="60" fill="#d32f2f" />
+
+          <!-- Крышка -->
+          <g class="lid">
+            <rect x="15" y="40" width="90" height="20" fill="#ffcc00" rx="4" />
+            <!-- Лента по горизонтали -->
+            <rect x="15" y="48" width="90" height="4" fill="#d32f2f" />
+          </g>
+
+          <!-- Бант -->
+          <g class="bow">
+            <!-- Левое "ухо" банта -->
+            <circle cx="45" cy="35" r="12" fill="#d32f2f" />
+            <!-- Правое "ухо" банта -->
+            <circle cx="75" cy="35" r="12" fill="#d32f2f" />
+            <!-- Центр банта -->
+            <circle cx="60" cy="35" r="6" fill="#b71c1c" />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="balloons">
+      <div class="balloon red"></div>
+      <div class="balloon blue"></div>
+      <div class="balloon yellow"></div>
+    </div>
+    <div class="modal" id="certificateModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="certificate">
+          <h2>SAYA LUX SPA<span class="number">№6539</span></h2>
+          <h3>Сертификат на процедуру: <strong>«Возрождение 1»</strong></h3>
+          <div class="certificate-link">
+            <a href="photo_2025-08-03_15-40-49.jpg" target="_blank">
+              📎 Открыть оригинал сертификата
+            </a>
+          </div>
+          <div class="footer">
+            <div>
+              <p><strong>@saya_lux_spa</strong></p>
+              <p>📞 8 747 049 13 88</p>
+              <p>📍 ул. Ш. Косшигулова 24/1</p>
+            </div>
+            <div>
+              <p><strong>Дата выдачи:</strong><br />03.08.2025</p>
+            </div>
+          </div>
+          <div class="certificate-action">
+            <button id="bookNowBtn">📅 Записаться на процедуру</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
