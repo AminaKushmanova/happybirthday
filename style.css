@@ -49,7 +49,7 @@ body {
 .inside {
   background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
   line-height: 1.5;
-  padding: 0 20px;
+  padding: 20px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -417,16 +417,71 @@ body {
     align-items: center;
   }
   .card {
-    width: 636px;
-    height: 400px;
+    width: 95vw;
+    height: 70vw;
+    flex-direction: column;
     position: absolute;
     margin: auto;
     left: 0;
     right: 28px;
     top: 0;
     bottom: 0;
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
-    transition: 1s;
+  }
+  .inside {
+    font-size: 9px;
+  }
+  .top-layer,
+  .middle-layer,
+  .bottom-layer {
+    height: 54px;
+    width: 156px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(
+        transparent 50px,
+        #fedbab 50px,
+        #fedbab 60px,
+        transparent 60px
+      ),
+      radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: auto;
+  }
+  .cake {
+    width: 98%;
+    position: absolute;
+    bottom: 24px;
+  }
+  .candle {
+    height: 19px;
+    width: 15px;
+    background: repeating-linear-gradient(
+      45deg,
+      #fd3018 0,
+      #fd3018 5px,
+      #ffa89e 5px,
+      #ffa89e 10px
+    );
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 127px;
+  }
+  .outside p {
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    text-align: center;
+    letter-spacing: 6px;
+    color: #000046;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 14px;
+    flex-direction: column;
   }
 }
